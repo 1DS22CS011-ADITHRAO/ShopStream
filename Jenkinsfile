@@ -86,6 +86,8 @@ kubectl create secret generic ${env.K8S_SECRET_NAME} ^
 
                             def frontendFullImage = "${env.FRONTEND_IMAGE_NAME}:${env.BUILD_NUMBER}"
                             def backendFullImage = "${env.BACKEND_IMAGE_NAME}:${env.BUILD_NUMBER}"
+                            bat "kubectl apply -f scripts/k8s/frontend-deployment.yaml"
+                            bat "kubectl apply -f scripts/k8s/backend-deployment.yaml"
 
                             bat "kubectl set image deployment/shopstream-frontend frontend=${frontendFullImage} -n ${env.K8S_NAMESPACE}"
                             bat "kubectl set image deployment/shopstream-backend backend=${backendFullImage} -n ${env.K8S_NAMESPACE}"
