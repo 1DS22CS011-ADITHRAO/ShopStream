@@ -105,6 +105,6 @@ kubectl create secret generic ${env.K8S_SECRET_NAME} ^
         always {
             echo 'Pipeline finished.'
             // cleanWs()
-        }
-    }
+      }
+    }
 }
