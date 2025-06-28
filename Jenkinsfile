@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_USERNAME         = "akashrajeshnair"
+        DOCKER_HUB_USERNAME         = "casualentity673"
         DOCKER_CREDENTIALS_ID       = "docker-creds"
         KUBECONFIG_CREDENTIALS_ID   = "minikube-config"
         MINIKUBE_IP                 = "192.168.49.2"
